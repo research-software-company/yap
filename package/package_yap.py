@@ -76,7 +76,7 @@ def add_script():
     elif platform == 'mac':
         target_script = os.path.join(yap_in_tmpdir, 'run-yap-api.sh')
         shutil.copyfile(os.path.join(yapdir, 'package', 'run-yap-api.sh'), target_script)
-        os.chmod(target_script, stat.S_IRWXU | stat.S_IRXG | stat.S_IRXO)
+        os.chmod(target_script, stat.S_IRWXU | stat.S_IRGRP | stat.S_IXGRP | stat.S_IROTH | stat.S_IXOTH)
         
 
 def zip_content():
