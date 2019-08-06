@@ -74,8 +74,8 @@ def add_script():
         shutil.copyfile(os.path.join(yapdir, 'package', 'run-yap-api.bat'),
                         os.path.join(yap_in_tmpdir, 'run-yap-api.bat'))
     elif platform == 'mac':
-        target_script = os.path.join(yap_in_tmpdir, 'package', 'run-yap-api.sh')
-        shutil.copyfile(os.path.join(yapdir, 'run-yap-api.sh'), target_script)
+        target_script = os.path.join(yap_in_tmpdir, 'run-yap-api.sh')
+        shutil.copyfile(os.path.join(yapdir, 'package', 'run-yap-api.sh'), target_script)
         os.chmod(target_script, stat.S_IRWXU | stat.S_IRXG | stat.S_IRXO)
         
 
